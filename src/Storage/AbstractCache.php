@@ -282,7 +282,7 @@ abstract class AbstractCache implements CacheInterface
      */
     public function getMetadata($path)
     {
-        if (isset($this->cache[$path]['type'])) {
+        if (isset($this->cache[$path]['type']) and isset($this->cache[$path]['size']) ) {
             return $this->cache[$path];
         }
 
